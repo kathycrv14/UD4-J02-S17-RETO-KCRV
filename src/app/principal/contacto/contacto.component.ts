@@ -66,7 +66,3 @@ export class ContactoComponent implements OnInit{
     }
 
 }
-
-//this.contactForm.push(this.nuevoFormulario);
-//this.nuevoFormulario = {name: '', email: '', password: '',telephone: '',paises: '',sujeto: '',message: ''};
-//;

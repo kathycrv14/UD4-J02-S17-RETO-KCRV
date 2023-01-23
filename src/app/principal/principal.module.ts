@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from './menu/menu.component';
-import { HomeComponent } from './home/home.component';
-import { NosotrosComponent } from './nosotros/nosotros.component';
 import { MensajeComponent } from './mensaje/mensaje.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -13,8 +11,6 @@ import { FiltradoPaisComponent } from './filtrado-pais/filtrado-pais.component';
 @NgModule({
   declarations: [
     MenuComponent,
-    HomeComponent,
-    NosotrosComponent,
     ContactoComponent,
     MensajeComponent,
     FiltradoPaisComponent,
@@ -27,8 +23,6 @@ import { FiltradoPaisComponent } from './filtrado-pais/filtrado-pais.component';
   ],
   exports: [
     MenuComponent,
-    HomeComponent,
-    NosotrosComponent,
     ContactoComponent,
     MensajeComponent,
     FiltradoPaisComponent,

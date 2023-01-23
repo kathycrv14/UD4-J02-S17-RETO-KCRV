@@ -5,25 +5,25 @@
         <!-- NOMBRE -->
         <section class="form-group">
           <input type="text" formControlName="name" class="form-control" required placeholder="Nombre">
-          <div *ngIf="name?.invalid && name?.touched" class="alert alert-danger error">
+          <section *ngIf="name?.invalid && name?.touched" class="alert alert-danger error">
             El nombre es requerido
-          </div>
+          </section>
         </section>
 
         <!-- CORREO ELECTRONICO-->
         <section class="form-group">
           <input type="email" formControlName="email" class="form-control" required placeholder="Correo Electronico">
-          <div *ngIf="email?.invalid && email?.touched" class="alert alert-danger error">
+          <section *ngIf="email?.invalid && email?.touched" class="alert alert-danger error">
             El correo electrónico no es valido
-          </div>
+          </section>
         </section>
 
       <!-- TELEFONO-->
         <section class="form-group">
           <input type="text" maxlength="8" class="form-control" formControlName="telephone" required placeholder="Telefono">
-          <div *ngIf="telephone?.invalid && telephone?.touched" class="alert alert-danger error">
+          <section *ngIf="telephone?.invalid && telephone?.touched" class="alert alert-danger error">
             El teléfono es requerido
-          </div>
+          </section>
         </section>
 
       <!-- SELECCION DE PAISES -->
@@ -35,22 +35,25 @@
             <option value="paraguay">Paraguay</option>
             <option value="brasil">Brasil</option>
           </select>
+            <section *ngIf="paises?.invalid && paises?.touched" class="alert alert-danger error">
+              Debe elegir un pais
+            </section>
         </section>
 
         <!-- SUJETO -->
         <section class="form-group">
           <input type="text" formControlName="sujeto" class="form-control" required placeholder="Sujeto">
-          <div *ngIf="sujeto?.invalid && sujeto?.touched" class="alert alert-danger error">
+          <section *ngIf="sujeto?.invalid && sujeto?.touched" class="alert alert-danger error">
             El sujeto es requerido
-          </div>
+          </section>
         </section>
 
         <!-- MENSAJE-->
         <section class="form-group">
           <textarea rows="5" cols="30" formControlName="message" required class="form-control" placeholder="Mensaje"></textarea>
-          <div *ngIf="message?.invalid && message?.touched" class="alert alert-danger error">
+          <section *ngIf="message?.invalid && message?.touched" class="alert alert-danger error">
             El mensaje es requerido
-          </div>
+          </section>
         </section>
 
         <!-- BUTTON -->
@@ -67,7 +70,7 @@
 
     <!-- FILTRADO POR PAIS -->
     <section class="col-12 sectionSelect">
-      <select class="form-select form-group" [(ngModel)]="filtradoporPais" >
+      <select class="form-select form-group" [(ngModel)]="filtradoporPais" required>
             <option value="">Filtrado por Pais</option>
             <option value="peru">Peru</option>
             <option value="mexico">Mexico</option>
@@ -79,9 +82,4 @@
       </section>
     </section>
   </section>
-
 </section>
-
-<!--<a routerLink="/contacto/{{ dato }}/mensaje"> <a routerLink="/vistafull/{{ dato }}/vistafiltro">Enviar datos a vistafiltro</a>-->
-<!--Enviar datos a vistafiltro-->
-<!--</a> --> 
